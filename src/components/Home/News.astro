@@ -34,9 +34,14 @@ const news = [
       news.map(({ title, image, link }) => (
         <a class="rounded-lg overflow-hidden group" href={link}>
           <article class="flex justify-center items-center relative">
-            <img src={image} alt={title} class="w-full h-full object-cover" />
+            <img
+              loading="lazy"
+              src={image}
+              alt={title}
+              class="w-full h-full object-cover aspect-[2/3]"
+            />
             <div class="flex items-center justify-center h-full w-full bg-purple-900/90 absolute group-hover:bottom-0 -bottom-full px-12 py-8 transition-all duration-500">
-              <h3 class="text-white text-4xl">{title}</h3>
+              <h3 class="text-white text-3xl">{title}</h3>
             </div>
           </article>
         </a>
