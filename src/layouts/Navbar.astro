@@ -1,0 +1,142 @@
+---
+import ArrowRight from "../components/Icons/ArrowRight.astro";
+import Donate from "../components/Icons/Donate.astro";
+import Logo from "../components/Icons/Logo.astro";
+
+const menuItems = [
+  {
+    label: "Nosotros",
+    href: "#",
+    submenu: [
+      {
+        label: "Quiénes somos",
+        href: "#",
+      },
+      {
+        label: "Nuestro equipo",
+        href: "#",
+      },
+      {
+        label: "¿Dónde trabajamos?",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "¿Qué hacemos?",
+    href: "#",
+    submenu: [
+      {
+        label: "Compromisos",
+        href: "#",
+      },
+      {
+        label: "Programas en curso",
+        href: "#",
+      },
+      {
+        label: "Programas ejecutados",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "Entérate",
+    href: "#",
+    submenu: [
+      {
+        label: "Noticias",
+        href: "#",
+      },
+      {
+        label: "Blog",
+        href: "#",
+      },
+      {
+        label: "Historias de vida",
+        href: "#",
+      },
+      {
+        label: "Videos",
+        href: "#",
+      },
+      {
+        label: "Imágenes",
+        href: "#",
+      },
+      {
+        label: "Preguntas frecuentes",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "Trabaja con nosotros",
+    href: "#",
+    submenu: [
+      {
+        label: "Convocatorias laborales",
+        href: "#",
+      },
+      {
+        label: "Proveedores y contratistas",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "Contacto",
+    href: "#",
+  },
+];
+---
+
+<header
+  class="sticky top-0 z-10 bg-purple-800 min-w-full h-24 py-5 px-16 flex justify-between items-center text-white shadow-sm"
+>
+  <div class="flex items-center gap-x-8 text-2xl justify-between">
+    <a href="#">
+      <Logo className="text-white w-36" />
+    </a>
+    <span class="w-[1px] h-8 bg-white"></span>
+    <span class="font-medium">Colombia</span>
+  </div>
+
+  <nav class="flex items-center gap-x-8">
+    <div class="flex items-center gap-x-8">
+      {
+        menuItems.map(({ label, submenu, href }) => (
+          <ul class="relative group cursor-pointer font-semibold">
+            <a href={href}>{label}</a>
+            {submenu && (
+              <ul class="w-60 invisible opacity-0 group-hover:visible group-hover:opacity-100 flex flex-col py-3 bg-white rounded-md shadow-md absolute top-full text-[#4d525a] font-medium transition-all duration-300">
+                {submenu.map(({ label, href }) => (
+                  <li class="relative">
+                    <a
+                      class="font-medium flex w-full py-2 px-4 hover:text-purple-800 hover:ml-2 transition-all duration-300"
+                      href={href}
+                    >
+                      <ArrowRight className="size-6 text-purple-800" />
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </ul>
+        ))
+      }
+    </div>
+
+    <a
+      href="#"
+      class="flex items-center gap-x-2 bg-white p-1 pr-6 rounded-full hover:scale-110 transition-transform duration-300"
+    >
+      <Donate className="size-10" />
+      <span class="text-purple-800 font-semibold">Dona</span>
+    </a>
+    <a href="#" class="hover:scale-110 transition-transform duration-300">
+      <img class="size-12" src="./usa.svg" alt="English" />
+    </a>
+  </nav>
+</header>
