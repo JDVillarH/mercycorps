@@ -1,0 +1,46 @@
+---
+const news = [
+  {
+    title: "“JovenPro me alentó a seguir mis sueños”",
+    image: "./news.webp",
+    link: "#",
+  },
+  {
+    title: "Lo que no cabe en los informes",
+    image: "./news.webp",
+    link: "#",
+  },
+  {
+    title: "Caficauca y Cooperacafé, comprometidos con el futuro...",
+    image: "./news.webp",
+    link: "#",
+  },
+  {
+    title: "Tejiendo liderazgos y fortaleciendo sueños",
+    image: "./news.webp",
+    link: "#",
+  },
+];
+---
+
+<section class="py-28">
+  <h2
+    class="text-5xl text-gray-600 border-b-2 border-purple-800 w-fit mx-auto mb-10"
+  >
+    ENTÉRATE
+  </h2>
+  <main class="flex justify-center items-center gap-x-1">
+    {
+      news.map(({ title, image, link }) => (
+        <a class="rounded-lg overflow-hidden group" href={link}>
+          <article class="flex justify-center items-center relative">
+            <img src={image} alt={title} class="w-full h-full object-cover" />
+            <div class="flex items-center justify-center h-full w-full bg-purple-900/90 absolute group-hover:bottom-0 -bottom-full px-12 py-8 transition-all duration-500">
+              <h3 class="text-white text-4xl">{title}</h3>
+            </div>
+          </article>
+        </a>
+      ))
+    }
+  </main>
+</section>
