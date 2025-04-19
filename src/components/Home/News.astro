@@ -1,7 +1,7 @@
 ---
 const news = [
   {
-    title: "“JovenPro me alentó a seguir mis sueños”",
+    title: "JovenPro me alentó a seguir mis sueños",
     image: "./news.webp",
     link: "#",
   },
@@ -11,7 +11,7 @@ const news = [
     link: "#",
   },
   {
-    title: "Caficauca y Cooperacafé, comprometidos con el futuro...",
+    title: "Caficauca y Cooperacafé, comprometidos con el futuro",
     image: "./news.webp",
     link: "#",
   },
@@ -24,11 +24,7 @@ const news = [
 ---
 
 <section class="py-28">
-  <h2
-    class="text-5xl text-gray-600 border-b-2 border-purple-800 w-fit mx-auto mb-10"
-  >
-    ENTÉRATE
-  </h2>
+  <h2 class="section-title">ENTÉRATE</h2>
   <main class="flex justify-center items-center gap-x-1">
     {
       news.map(({ title, image, link }) => (
@@ -40,7 +36,7 @@ const news = [
               alt={title}
               class="w-full h-full object-cover aspect-[2/3]"
             />
-            <div class="flex items-center justify-center h-full w-full bg-purple-900/90 absolute group-hover:bottom-0 -bottom-full px-12 py-8 transition-all duration-500">
+            <div class="flex items-center justify-center h-full w-full bg-purple-900/80 group-even:bg-gray-600/80 absolute group-hover:bottom-0 -bottom-full px-12 py-8 transition-all duration-500">
               <h3 class="text-white text-3xl">{title}</h3>
             </div>
           </article>

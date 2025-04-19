@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-    font-family: 'Montserrat Variable', sans-serif;
+  font-family: "Montserrat Variable", sans-serif;
 }
 
 h1,
@@ -10,5 +10,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+  font-weight: 700;
+}
+
+.section-title {
+  @apply text-5xl text-gray-600 border-b-2 border-purple-800 w-fit mx-auto mb-10;
 }

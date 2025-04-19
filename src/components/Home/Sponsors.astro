@@ -1,0 +1,82 @@
+---
+const news = [
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+  {
+    title: "Alt de la marca",
+    image: "./brand.webp",
+    link: "#",
+  },
+];
+---
+
+<section class="py-28">
+  <h2 class="section-title">NUESTROS ALIADOS</h2>
+  <main class="grid grid-cols-6 justify-center items-center gap-24 pt-12">
+    {
+      news.map(({ title, image, link }) => (
+        <a href={link}>
+          <img
+            loading="lazy"
+            src={image}
+            alt={title}
+            class="size-32 object-cover aspect-square"
+          />
+        </a>
+      ))
+    }
+  </main>
+</section>
