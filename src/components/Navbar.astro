@@ -1,7 +1,7 @@
 ---
-import ArrowRight from "../components/Icons/ArrowRight.astro";
-import Donate from "../components/Icons/Donate.astro";
-import Logo from "../components/Icons/Logo.astro";
+import ArrowRight from "../assets/ArrowRight.svg";
+import Donate from "../assets/Donate.svg";
+import Logo from "../assets/Logo.svg";
 
 const menuItems = [
   {
@@ -96,7 +96,7 @@ const menuItems = [
 >
   <div class="flex items-center gap-x-8 text-2xl justify-between">
     <a href="#">
-      <Logo className="text-white w-36" />
+      <Logo class="text-white w-36" />
     </a>
     <span class="w-[1px] h-8 bg-white"></span>
     <span class="font-medium">Colombia</span>
@@ -116,7 +116,7 @@ const menuItems = [
                       class="font-medium flex w-full py-2 px-4 hover:text-purple-800 hover:ml-2 transition-all duration-300"
                       href={href}
                     >
-                      <ArrowRight className="size-6 text-purple-800" />
+                      <ArrowRight class="size-6 text-purple-800" />
                       {label}
                     </a>
                   </li>
@@ -132,7 +132,7 @@ const menuItems = [
       href="#"
       class="flex items-center gap-x-2 bg-white p-1 pr-6 rounded-full hover:scale-110 transition-transform duration-300"
     >
-      <Donate className="size-10" />
+      <Donate class="size-10" />
       <span class="text-purple-800 font-semibold">Dona</span>
     </a>
     <a href="#" class="hover:scale-110 transition-transform duration-300">

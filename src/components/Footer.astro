@@ -1,0 +1,73 @@
+---
+import Facebook from "../assets/Facebook.svg";
+import X from "../assets/X.svg";
+import Instagram from "../assets/Instagram.svg";
+import YouTube from "../assets/YouTube.svg";
+import Intranet from "../assets/Intranet.svg";
+
+const socialMedia = [
+  {
+    Icon: Facebook,
+    href: "#",
+  },
+  {
+    Icon: Instagram,
+    href: "#",
+  },
+  {
+    Icon: X,
+    href: "#",
+  },
+  {
+    Icon: YouTube,
+    href: "#",
+  },
+];
+---
+
+<footer
+  class="bg-purple-900 text-white min-h-32 grid grid-cols-3 items-center justify-between p-12"
+>
+  <div class="flex items-center justify-between gap-x-16 w-fit mx-auto">
+    <a href="#" class="flex flex-col items-center gap-y-2">
+      <Intranet class="w-16 mx-auto aspect-square" />
+      <p>Administración</p>
+    </a>
+
+    <a href="#" class="flex flex-col items-center gap-y-2">
+      <Intranet class="w-16 mx-auto aspect-square" />
+      <p>Intranet</p>
+    </a>
+  </div>
+
+  <div class="flex flex-col items-center justify-center gap-y-4">
+    <span class="mb-6"
+      >Visita nuestra <a class="underline font-bold" href="#">página global</a
+      ></span
+    >
+    <div class="flex items-center justify-center gap-x-4">
+      {
+        socialMedia.map(({ Icon, href }) => (
+          <a href={href}>
+            <Icon class="rounded-[100%] border-2 border-white size-12 p-2 hover:scale-110 transition-transform duration-300" />
+          </a>
+        ))
+      }
+    </div>
+    <p>Carrera 13 # 90 - 17 Piso 3 - Bogotá - Colombia</p>
+    <a href="#" class="underline font-bold">Política de datos</a>
+    <small>Todos los derechos reservados 2025</small>
+  </div>
+
+  <div class="flex items-center justify-between gap-x-12 w-fit mx-auto">
+    <div class="flex flex-col items-center gap-y-2">
+      <Intranet class="w-16 mx-auto aspect-square" />
+      <p>Administración</p>
+    </div>
+
+    <div class="flex flex-col items-center gap-y-2">
+      <Intranet class="w-16 mx-auto aspect-square" />
+      <p>Intranet</p>
+    </div>
+  </div>
+</footer>
