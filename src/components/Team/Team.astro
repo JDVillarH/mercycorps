@@ -1,0 +1,76 @@
+---
+const team = [
+  {
+    name: "Juan Diego",
+    position: "CEO",
+    image: "./avatar.webp",
+  },
+  {
+    name: "Juan Diego",
+    position: "CEO",
+    image: "./avatar.webp",
+  },
+  {
+    name: "Juan Diego",
+    position: "CEO",
+    image: "./avatar.webp",
+  },
+  {
+    name: "Juan Diego",
+    position: "CEO",
+    image: "./avatar.webp",
+  },
+  {
+    name: "Juan Diego",
+    position: "CEO",
+    image: "./avatar.webp",
+  },
+  {
+    name: "Juan Diego",
+    position: "CEO",
+    image: "./avatar.webp",
+  },
+  {
+    name: "Juan Diego",
+    position: "CEO",
+    image: "./avatar.webp",
+  },
+  {
+    name: "Juan Diego",
+    position: "CEO",
+    image: "./avatar.webp",
+  },
+  {
+    name: "Juan Diego",
+    position: "CEO",
+    image: "./avatar.webp",
+  },
+];
+---
+
+<section class="py-32">
+  <h2 class="text-purple-600 text-center text-4xl max-w-5xl mx-auto">
+    Somos enérgicos, creativos, buenos colegas, buscamos ideas
+    brillantes,audaces y conectadas.
+  </h2>
+
+  <div
+    class="flex flex-wrap justify-between items-center gap-x-32 gap-y-16 max-w-6xl mx-auto pt-16"
+  >
+    {
+      team.map(({ name, position, image }) => (
+        <figure class="text-center">
+          <img
+            class="rounded-full size-72 object-cover mb-4"
+            src={image}
+            alt={name}
+            loading="lazy"
+            decoding="async"
+          />
+          <h3 class="text-purple-600 text-2xl">{name}</h3>
+          <p class="text-gray-600 font-semibold">{position}</p>
+        </figure>
+      ))
+    }
+  </div>
+</section>
