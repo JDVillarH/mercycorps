@@ -64,8 +64,10 @@ const news = [
 ---
 
 <section class="py-28 bg-white">
-  <h2 class="section-title">NUESTROS ALIADOS</h2>
-  <main class="grid grid-cols-6 justify-center items-center gap-24 pt-12">
+  <h2 class="title mb-10">NUESTROS ALIADOS</h2>
+  <main
+    class="grid grid-cols-6 justify-between items-center gap-24 pt-12 max-w-11/12 mx-auto"
+  >
     {
       news.map(({ title, image, link }) => (
         <a href={link} class="rounded-[100%] size-fit mx-auto">

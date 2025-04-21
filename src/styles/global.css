@@ -13,6 +13,10 @@ h6 {
   font-weight: 700;
 }
 
-.section-title {
-  @apply text-5xl text-gray-600 border-b-2 border-purple-800 w-fit mx-auto mb-10;
+.title {
+  @apply text-5xl text-gray-600 border-b-2 border-purple-800 w-fit mx-auto;
+}
+
+.title-purple {
+  @apply text-5xl text-purple-600 border-b-2 border-purple-800 w-fit mx-auto;
 }

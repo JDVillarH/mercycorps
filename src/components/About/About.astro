@@ -1,0 +1,80 @@
+---
+import AboutCard from "../Card.astro";
+import Vision from "../Vision.astro";
+
+const aboutItems = [
+  {
+    title: "Atendemos necesidades urgentes",
+    description:
+      "Estamos ahí cuando el mundo nos necesita: antes, durante o después de una emergencia.",
+  },
+  {
+    title: "Construimos un mañana más fuerte",
+    description:
+      "Creamos soluciones innovadoras al conectar a las personas con los recursos que necesitan para fortalecer su comunidad desde adentro.",
+  },
+];
+---
+
+<section class="text-gray-900">
+  <img
+    class="w-full object-cover"
+    src="../banner.webp"
+    alt="Portada de la sección"
+  />
+
+  <div class="bg-white w-full">
+    <p class="max-w-6xl mx-auto px-4 py-16 text-3xl text-gray-900 text-center">
+      Somos una organización global (no gubernamental y sin ánimo de lucro)
+      impulsada a creer en un mundo lleno de posibilidades.
+      <br /><br />
+
+      Con más de 45 años de experiencia, seguimos trabajando para dar soluciones
+      duraderas a las comunidades, y apoyarlas a pasar de la crisis a las
+      oportunidades ante el conflicto, la migración y el cambio climático.
+    </p>
+  </div>
+
+  <div class="pt-16">
+    <div class="max-w-6xl mx-auto px-4 py-16 text-3xl text-center">
+      <h2 class="text-5xl text-purple-600">EN COLOMBIA</h2>
+      <br />
+      <p class="text-2xl">
+        Desde el 2005, hemos trabajado en
+        <strong>20 departamentos del país</strong>
+        , creando y fortaleciendo alianzas y oportunidades equitativas con las comunidades,
+        el sector público y privado.
+        <br /><br />
+
+        En <strong>19 años</strong> hemos apoyado a más de
+        <strong>1 millón de personas</strong> por medio de nuestros programas, fortaleciendo
+        sus capacidades socioeconómicas con enfoque de género.
+        <br /><br />
+
+        Desde nuestro trabajo le apostamos a la implementación de los
+        <strong>Acuerdos de Paz</strong> en Colombia
+      </p>
+    </div>
+  </div>
+
+  <div class="flex gap-x-4 py-16 text-3xl text-center my-16">
+    {
+      aboutItems.map(({ title, description }) => (
+        <AboutCard title={title} description={description} />
+      ))
+    }
+  </div>
+
+  <section>
+    <Vision
+      title="MISIÓN"
+      description="Mercy Corps existe para aliviar el sufrimiento, la pobreza y la opresión, ayudando a las personas a construir comunidades seguras, productivas y justas."
+      image="mision"
+    />
+    <Vision
+      title="VISIÓN"
+      description="Vemos el mundo de manera diferente, así que actuamos de manera diferente. Apoyamos a las comunidades y a las personas más afectadas dentro de ellas a pasar de crisis a oportunidad ante el conflicto y el cambio climático, a través de ideas innovadoras, acciones audaces y conocimiento local."
+      image="vision"
+    />
+  </section>
+</section>
